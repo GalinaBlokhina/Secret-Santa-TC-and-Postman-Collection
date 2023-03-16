@@ -1,0 +1,111 @@
+Pезюме,Ключ задачи,Идентификатор задачи,Тип задачи,Статус,Ключ проекта,Название проекта,Тип проекта,Руководитель проекта,Идентификатор руководителя проекта,Описание проекта,Приоритет,Решение,Исполнитель,Идентификатор исполнителя,Автор,Идентификатор автора,Создатель,Идентификатор создателя,Создано,Обновлено,Последний просмотр,Решено,Срок исполнения,Голоса,Описание,Среда,Наблюдатели,Идентификатор наблюдателей,Исходная оценка,Оценка остатка,Затраченное время,КПД (полезная работа/затраченная работа),Суммарная первоначальная оценка,Суммарная оценка остатка,Суммарное затраченое время,Уровень безопасности,Пользовательское поле (Actual end),Пользовательское поле (Actual start),Пользовательское поле (Begin Date),Пользовательское поле (Change reason),Пользовательское поле (Change risk),Пользовательское поле (Change type),Пользовательское поле (Compass),Пользовательское поле (End Date),Пользовательское поле (Impact),Пользовательское поле (Issue color),Пользовательское поле (Rank),Пользовательское поле (Request Type),Пользовательское поле (Revision),Пользовательское поле (Start date),Пользовательское поле (Story point estimate),Пользовательское поле (Target end),Пользовательское поле (Target start),Пользовательское поле (Team),Пользовательское поле ([CHART] Date of First Response),Пользовательское поле (development),Пользовательское поле (Заблокированные формы),Пользовательское поле (Открытые формы),Пользовательское поле (Отправленные формы),Пользовательское поле (Совокупные формы),Категория статуса
+"Повторное удаление ранее удаленной коробки, DELETE 404 not found",LWXU-20,10019,Test,Backlog,LWXU,Тайный С,software,Galina Blokhina,64073ba70a4a47fb8d23c0e5,,Medium,,,,Galina Blokhina,64073ba70a4a47fb8d23c0e5,Galina Blokhina,64073ba70a4a47fb8d23c0e5,15/мар/23 5:26 PM,15/мар/23 5:26 PM,16/мар/23 5:06 PM,,,0,"*Описание шагов*
+
+1. Ввести URL ранее удаленной коробки https://staging.lpitko.ru/api/box/20230101
+2. Создать запрос методом DELETE 
+
+
+
+{code:java}
+{
+
+""cashLimit"": null,
+""cashLimitCurrency"": null,
+""createAdminCard"": null,
+""email"": null,
+""isArchived"": null,
+""isCreated"": true,
+""isInviteAfterDraw"": null,
+""isPhoneRequired"": false,
+""key"": ""NiceGift"",
+""logo"": null,
+""name"": """",
+""picture"": ""cup_cake"",
+""useCashLimit"": null,
+""useCircleDraw"": null
+}
+{code}
+
+
+*Ожидаемый результат
+
+Коробка не найдена, ответ 404 not found",,Galina Blokhina,64073ba70a4a47fb8d23c0e5,,,,,,,,,,,,,,,,,,,0|i00047:,,,,,,,,,,,,,,К выполнению
+"Удаление ранее созданной коробки, DELETE 200 ок",LWXU-19,10018,Test,Backlog,LWXU,Тайный С,software,Galina Blokhina,64073ba70a4a47fb8d23c0e5,,Medium,,,,Galina Blokhina,64073ba70a4a47fb8d23c0e5,Galina Blokhina,64073ba70a4a47fb8d23c0e5,15/мар/23 5:24 PM,15/мар/23 5:24 PM,15/мар/23 5:24 PM,,,0,"Описание шагов
+
+1. Ввести URL ранее созданной коробки https://staging.lpitko.ru/api/box/20230101
+2. Создать запрос методом DELETE 
+
+
+{
+
+""cashLimit"": null,
+""cashLimitCurrency"": null,
+""createAdminCard"": null,
+""email"": null,
+""isArchived"": null,
+""isCreated"": true,
+""isInviteAfterDraw"": null,
+""isPhoneRequired"": false,
+""key"": ""NiceGift"",
+""logo"": null,
+""name"": """",
+""picture"": ""cup_cake"",
+""useCashLimit"": null,
+""useCircleDraw"": null
+}
+
+*Ожидаемый результат
+
+Коробка удалена, ответ 200 ок",,Galina Blokhina,64073ba70a4a47fb8d23c0e5,,,,,,,,,,,,,,,,,,,0|i0003z:,,,,,,,,,,,,,,К выполнению
+"Изменение идентификатора коробки, PUT 400 bad request",LWXU-18,10017,Test,Backlog,LWXU,Тайный С,software,Galina Blokhina,64073ba70a4a47fb8d23c0e5,,Medium,,,,Galina Blokhina,64073ba70a4a47fb8d23c0e5,Galina Blokhina,64073ba70a4a47fb8d23c0e5,15/мар/23 5:07 PM,15/мар/23 5:08 PM,15/мар/23 5:20 PM,,,0,"*Описание шагов*
+
+# Ввести URL ранее созданной коробки https://staging.lpitko.ru/api/box/SecretSanta
+# Создать запрос методом PUT
+# В поле Key ввести новый идентификатор
+
+{
+    ""cashLimit"": null,
+    ""cashLimitCurrency"": null,
+    ""createAdminCard"": null,
+    ""email"": null,
+    ""isArchived"": null,
+    ""isCreated"": true,
+    ""isInviteAfterDraw"": null,
+    ""isPhoneRequired"": false,
+    ""key"": ""NiceGift"",
+    ""logo"": null,
+    ""name"": """",
+    ""picture"": ""cup_cake"",
+    ""useCashLimit"": null,
+    ""useCircleDraw"": null
+}
+
+*Ожидаемый результат
+
+Идентификатор без изменений, ответ 400 bad request",,Galina Blokhina,64073ba70a4a47fb8d23c0e5,,,,,,,,,,,,,,,,,,,0|i0003r:,,,,,,,,,,,,,,К выполнению
+"Изменение названия коробки, PUT 200 ок",LWXU-17,10016,Test,Backlog,LWXU,Тайный С,software,Galina Blokhina,64073ba70a4a47fb8d23c0e5,,Medium,,,,Galina Blokhina,64073ba70a4a47fb8d23c0e5,Galina Blokhina,64073ba70a4a47fb8d23c0e5,15/мар/23 4:55 PM,15/мар/23 5:08 PM,15/мар/23 5:07 PM,,,0,"*Описание шагов*
+
+# Ввести URL ранее созданной коробки [https://staging.lpitko.ru/api/box/SecretSanta|https://staging.lpitko.ru/api/box/SecretSanta]
+# Создать запрос методом PUT
+# В поле Name ввести новое название вместо прежнего RandomNoun
+
+{code:java}{
+    ""cashLimit"": null,
+    ""cashLimitCurrency"": null,
+    ""createAdminCard"": null,
+    ""email"": null,
+    ""isArchived"": null,
+    ""isCreated"": true,
+    ""isInviteAfterDraw"": null,
+    ""isPhoneRequired"": false,
+    ""key"": ""SecretSanta"",
+    ""logo"": null,
+    ""name"": ""FromNowhereWithLove"",
+    ""picture"": ""cup_cake"",
+    ""useCashLimit"": null,
+    ""useCircleDraw"": null
+}{code}
+
+*Ожидаемый результат
+
+Коробка переименована, ответ 200 ",,Galina Blokhina,64073ba70a4a47fb8d23c0e5,,,,,,,,,,,,,,,,,,,0|i0003j:,,,,,,,,,,,,,,К выполнению
